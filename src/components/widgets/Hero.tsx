@@ -34,6 +34,7 @@ export default component$(() => {
                     <button class="text-white sm:mb-0 bg-transparent border-2 border-white hover:bg-fourth hover:border-fourth rounded-lg px-5 py-2.5">
                       <p class="text-white">Kontakt</p>
                     </button>
+
                   </div>
                 </div>
               </div>
@@ -43,8 +44,8 @@ export default component$(() => {
       </div>
       <div class="absolute h-full w-full overflow-hidden top-0">
         <img
-          src={heroImage}
-          class="relative left-0 h-full min-w-full max-w-none bg-blend-overlay object-fill bottom-0"
+          src={heroImage} 
+          class="relative left-0 min-h-full min-w-full max-w-none bg-blend-overlay object-fill bottom-0"
           alt="Hero Image Bestattungsvorsorge"
           loading="eager"
         />
