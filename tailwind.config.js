@@ -4,7 +4,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}", "./node_modules/react-tailwindcss-datepicker/dist/index.esm.js"],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
