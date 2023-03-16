@@ -50,5 +50,9 @@
   },
   "engines": {
     "node": ">=15.0.0"
+  },
+  "dependencies": {
+    "daisyui": "^2.51.3",
+    "react-tailwindcss-datepicker": "^1.5.1"
   }
 }

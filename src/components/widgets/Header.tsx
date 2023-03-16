@@ -78,6 +78,15 @@ export default component$(() => {
                     ) : null}
                   </li>
                 ))}
+                <li class="flex md:hidden">
+                <a
+                  href="/kontakt"
+                  aria-label="Kontakt Page"
+                  class="inline-flex items-center justify-center px-5 py-2 mr-3 mx-4 my-3 text-base font-medium text-center text-white rounded-lg bg-third hover:bg-third-700 focus:ring-4"
+                >
+                  <p class="text-white font-bold">Kontakt</p>
+                </a>     
+                </li>
               </ul>
             ) : null}
           </nav>
