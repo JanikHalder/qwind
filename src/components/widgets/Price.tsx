@@ -5,6 +5,7 @@ export default component$(() => {
     value: false,
     text: "",
   });
+  
   const dateState = useStore({
     datenow: new Date(),
   });
