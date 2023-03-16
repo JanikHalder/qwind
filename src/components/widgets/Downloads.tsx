@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
-import Flyer from '/Folder-Wiener-Verein-05-2021.pdf'
-import ServicKarte from '/Servicekarte.pdf'
+import Flyer from 'public/Folder-Wiener-Verein-05-2021.pdf'
+import ServicKarte from 'public/Servicekarte.pdf'
 
 export default component$(() => {
     return (
