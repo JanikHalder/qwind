@@ -1,7 +1,8 @@
 export const SITE = {
   name: "Wiener Verein",
 
-  title: "Wiener Verein — Deine Bestattungsvorsorge für Tirol und Vorarlberg.",
+  title:
+    "Wiener Verein — Deine Bestattungsvorsorge für Tirol und Vorarlberg.",
   description:
     "Qwind is a free and ready to start template to make your website using Qwik and Tailwind CSS.",
 

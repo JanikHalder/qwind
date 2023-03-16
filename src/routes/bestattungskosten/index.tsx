@@ -6,13 +6,13 @@ import HeroKosten from "~/components/widgets/HeroKosten";
 import Stats from "~/components/widgets/Stats";
 
 export default component$(() => {
-  return (
-    <>
-      <HeroKosten />
-      <ContentKosten />
-      <BenefitsBestattungskosten />
-      <Stats />
-      <CTA />
-    </>
-  );
+    return (
+        <>
+            <HeroKosten />
+            <ContentKosten />
+            <BenefitsBestattungskosten />
+            <Stats />
+            <CTA />
+        </>
+    )
 });

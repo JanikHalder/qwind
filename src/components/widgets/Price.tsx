@@ -1,11 +1,10 @@
-import { component$, useStore } from "@builder.io/qwik";
+import React, { component$, useStore } from "@builder.io/qwik";
 
 export default component$(() => {
   const popUpState = useStore({
     value: false,
     text: "",
   });
-  
   const dateState = useStore({
     datenow: new Date(),
   });
@@ -48,7 +47,7 @@ export default component$(() => {
             <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
                 <h2 class="mb-4 text-6xl tracking-tight font-extrabold text-white">Unsere Pakete</h2>
             </div>
-            <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0 items-end">
+            <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0 items-start">
                 <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border shadow border-gray-600 xl:p-8 ">
                     <h3 class="mb-4 text-2xl font-semibold">Basis</h3>
                     <p class="font-light text-gray-500 sm:text-lg mb-8">Das kleine Paket um seinen Bedüfnisse abzudecken</p>

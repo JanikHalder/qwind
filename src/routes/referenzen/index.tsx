@@ -5,21 +5,21 @@ import HeroReferenzen from "~/components/widgets/HeroReferenzen";
 
 import { SITE } from "~/config.mjs";
 
+
 export default component$(() => {
-  return (
-    <>
-      <HeroReferenzen />
-      <ContentReferenzen />
-    </>
-  );
-});
+    return (
+            <>
+                <HeroReferenzen />
+                <ContentReferenzen />
+            </>
+)})
 
 export const head: DocumentHead = {
-  title: SITE.title,
-  meta: [
-    {
-      name: "description",
-      content: SITE.description,
-    },
-  ],
+    title: SITE.title,
+    meta: [
+      {
+        name: "description",
+        content: SITE.description,
+      },
+    ],
 };

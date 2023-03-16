@@ -5,21 +5,21 @@ import HeroTeam from "~/components/widgets/HeroTeam";
 
 import { SITE } from "~/config.mjs";
 
+
 export default component$(() => {
-  return (
-    <>
-      <HeroTeam />
-      <ContentTeam />
-    </>
-  );
-});
+    return (
+            <>
+                <HeroTeam />
+                <ContentTeam />
+            </>
+)})
 
 export const head: DocumentHead = {
-  title: SITE.title,
-  meta: [
-    {
-      name: "description",
-      content: SITE.description,
-    },
-  ],
+    title: SITE.title,
+    meta: [
+      {
+        name: "description",
+        content: SITE.description,
+      },
+    ],
 };

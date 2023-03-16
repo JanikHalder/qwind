@@ -27,7 +27,8 @@ export default component$(() => {
         answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.`,
       },
       {
-        question: "Kann jeder eine Bestattungsvorsorge abschließen?",
+        question:
+          "Kann jeder eine Bestattungsvorsorge abschließen?",
         answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.`,
       },
     ],
@@ -38,7 +39,7 @@ export default component$(() => {
       <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
         <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
           <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-            <p class="text-base text-third font-semibold tracking-wide uppercase">
+            <p class="text-third font-bold tracking-wide uppercase text-xl">
               FAQs
             </p>
             <h2 class="max-w-lg mb-4 text-black text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto font-heading">
@@ -57,7 +58,9 @@ export default component$(() => {
                       {question}
                     </h3>
                     {answer.split("\n\n").map((paragraph) => (
-                      <p class="text-gray-700 mb-2">{paragraph}</p>
+                      <p class="text-gray-700 mb-2">
+                        {paragraph}
+                      </p>
                     ))}
                   </div>
                 ))}
