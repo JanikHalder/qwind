@@ -6,20 +6,20 @@ import ContactComponent from "~/components/widgets/ContactComponent";
 import { SITE } from "~/config.mjs";
 
 export default component$(() => {
-    return (
-            <>
-                <ContactComponent />
-                <Contact />
-            </>
-)})
+  return (
+    <>
+      <ContactComponent />
+      <Contact />
+    </>
+  );
+});
 
 export const head: DocumentHead = {
-    title: SITE.title,
-    meta: [
-      {
-        name: "description",
-        content: SITE.description,
-      },
-    ],
-  };
-  
+  title: SITE.title,
+  meta: [
+    {
+      name: "description",
+      content: SITE.description,
+    },
+  ],
+};

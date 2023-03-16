@@ -9,23 +9,23 @@ import Price from "~/components/widgets/Price";
 import { SITE } from "~/config.mjs";
 
 export default component$(() => {
-    return (
-            <>
-                <HeroLeistungen />
-                <FeatureLeistungen />
-                <NummerEins />
-                <Downloads />
-                <Price />
-            </>
-)})
+  return (
+    <>
+      <HeroLeistungen />
+      <FeatureLeistungen />
+      <NummerEins />
+      <Downloads />
+      <Price />
+    </>
+  );
+});
 
 export const head: DocumentHead = {
-    title: SITE.title,
-    meta: [
-      {
-        name: "description",
-        content: SITE.description,
-      },
-    ],
-  };
-  
+  title: SITE.title,
+  meta: [
+    {
+      name: "description",
+      content: SITE.description,
+    },
+  ],
+};

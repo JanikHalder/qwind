@@ -26,7 +26,8 @@ export default component$(() => {
     },
   ];
 
-  const contact = [{
+  const contact = [
+    {
       title: "Kontakt",
       items: [
         { title: "Tel: +43 50 350 69000", href: "#" },
@@ -34,7 +35,8 @@ export default component$(() => {
         { title: "6020 Innsbruck", href: "#" },
         { title: "Salurnerstraße 3", href: "#" },
       ],
-    }]
+    },
+  ];
 
   const social = [
     { label: "Twitter", icon: IconTwitter, href: "#" },
@@ -48,7 +50,10 @@ export default component$(() => {
         <div class="flex flex-col justify-center lg:grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
           <div class="col-span-12 lg:col-span-4 pr-8">
             <div class="mb-2">
-              <Link class="inline-block font-bold text-xl uppercase text-third" href={"/"}>
+              <Link
+                class="inline-block font-bold text-xl uppercase text-third"
+                href={"/"}
+              >
                 <Logo />
               </Link>
             </div>
@@ -58,9 +63,7 @@ export default component$(() => {
           </div>
           {links.map(({ title, items }) => (
             <div class="col-span-6 md:col-span-3 lg:col-span-2" key={title}>
-              <div class="font-medium mb-2">
-                {title}
-              </div>
+              <div class="font-medium mb-2">{title}</div>
               {items && Array.isArray(items) && items.length > 0 && (
                 <ul class="text-sm">
                   {items.map(({ title, href }) => (
@@ -79,9 +82,7 @@ export default component$(() => {
           ))}
           {contact.map(({ title, items }) => (
             <div class="col-span-6 md:col-span-3 lg:col-span-4" key={title}>
-              <div class="font-medium mb-2">
-                {title}
-              </div>
+              <div class="font-medium mb-2">{title}</div>
               {items && Array.isArray(items) && items.length > 0 && (
                 <ul class="text-sm">
                   {items.map(({ title, href }) => (
