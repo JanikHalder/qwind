@@ -40,6 +40,7 @@ export default component$(() => {
     "Oktober",
     "November",
     "Dezember",
+    "New"
   ];
 
   return (
