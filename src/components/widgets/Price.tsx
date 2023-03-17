@@ -239,13 +239,13 @@ export default component$(() => {
                               type="email"
                               id="email"
                               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 "
-                              placeholder="name@deinemail.com"
+                              placeholder="Deine E-Mail"
                             />
                             <input
                               type="tel"
                               id="tel"
                               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 "
-                              placeholder="+43 676 / 95437382746"
+                              placeholder="Deine Telefonnummer"
                               required
                             />
                           </div>

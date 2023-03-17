@@ -44,7 +44,7 @@ export default component$(() => {
                     </svg>
                     </div>
                 </div>
-                <h3 class="mb-3 text-xl font-bold font-heading leading-snug">Addresse</h3>
+                <h3 class="mb-3 text-xl font-bold font-heading leading-snug">Adresse</h3>
                 <p class="font-medium max-w-xs mx-auto leading-relaxed">6020 Innsbruck, Salurnerstraße 3, Österreich</p>
                 </div>
             </div>

@@ -4,7 +4,7 @@ export default component$(() => {
     return (
         <section class="bg-white">
             <div class="container px-6 py-10 mx-auto max-w-screen-xl">
-                <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl">Unsere Alleinstellungs-<br/><span class="underline decoration-third">Merkmale</span></h1>
+                <h2 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl">Unsere Alleinstellungs-<br/><span class="underline decoration-third">Merkmale</span></h2>
 
                 <p class="mt-4 text-gray-500 xl:mt-6 ">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
@@ -19,7 +19,7 @@ export default component$(() => {
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize ">Sofortschutz – keine Gesundheitsfragen</h1>
+                        <h3 class="text-xl font-semibold text-gray-700 capitalize ">Sofortschutz – keine Gesundheitsfragen</h3>
 
                         <p class="text-gray-500 ">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
@@ -33,7 +33,7 @@ export default component$(() => {
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize ">Lebenslanger Schutz</h1>
+                        <h3 class="text-xl font-semibold text-gray-700 capitalize ">Lebenslanger Schutz</h3>
 
                         <p class="text-gray-500 ">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
@@ -47,7 +47,7 @@ export default component$(() => {
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize ">Zusatz-Absicherung</h1>
+                        <h3 class="text-xl font-semibold text-gray-700 capitalize ">Zusatz-Absicherung</h3>
 
                         <p class="text-gray-500 ">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
@@ -61,7 +61,7 @@ export default component$(() => {
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize ">Im Ernstfall – Direktverrechnung</h1>
+                        <h3 class="text-xl font-semibold text-gray-700 capitalize ">Im Ernstfall – Direktverrechnung</h3>
 
                         <p class="text-gray-500">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
@@ -75,7 +75,7 @@ export default component$(() => {
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize ">Ausrichtung der Bestattung nach persönlichen Wünschen</h1>
+                        <h3 class="text-xl font-semibold text-gray-700 capitalize ">Ausrichtung der Bestattung nach persönlichen Wünschen</h3>
 
                         <p class="text-gray-500">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
@@ -89,7 +89,7 @@ export default component$(() => {
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize ">Weltweites Überführungsservice</h1>
+                        <h3 class="text-xl font-semibold text-gray-700 capitalize ">Weltweites Überführungsservice</h3>
 
                         <p class="text-gray-500">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
@@ -103,7 +103,7 @@ export default component$(() => {
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize ">Soforthilfe – wir kümmern uns um Sie</h1>
+                        <h3 class="text-xl font-semibold text-gray-700 capitalize ">Soforthilfe – wir kümmern uns um Sie</h3>
 
                         <p class="text-gray-500">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
@@ -117,7 +117,7 @@ export default component$(() => {
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize ">Hilfe in der Organisation</h1>
+                        <h3 class="text-xl font-semibold text-gray-700 capitalize ">Hilfe in der Organisation</h3>
 
                         <p class="text-gray-500">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet

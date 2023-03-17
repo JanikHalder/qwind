@@ -23,17 +23,15 @@ export default component$(() => {
                   <div class="flex w-full justify-center md:justify-start">
                     <a
                       class="text-white bg-third hover:bg-fourth sm:mb-0 border-none font-bold text-center rounded-lg px-5 py-2.5"
-                      href="https://github.com/onwidget/qwind"
-                      target="_blank"
-                      rel="noopener"
+                      href="/preise"
                     >
                       <p class="text-white">Angebot anfragen</p>
                     </a>
                   </div>
                   <div class="flex w-full justify-center md:justify-start">
-                    <button class="text-white font-bold sm:mb-0 bg-transparent border-2 border-white hover:bg-fourth hover:border-fourth rounded-lg px-5 py-2.5">
+                    <a href="/kontakt" class="text-white font-bold sm:mb-0 bg-transparent border-2 border-white hover:bg-fourth hover:border-fourth rounded-lg px-5 py-2.5">
                       <p class="text-white">Kontakt</p>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
