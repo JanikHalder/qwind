@@ -29,6 +29,7 @@ export default component$((props: ItemProps) => {
         // TODO:
         document.body.classList.toggle("overflow-hidden");
         document.getElementById("header")?.classList.toggle("h-screen");
+        document.getElementById("header")?.classList.toggle("bg-slate-900")
         document.querySelector("#header nav")?.classList.toggle("hidden");
       }}
     >

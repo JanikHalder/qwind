@@ -18,7 +18,7 @@ export default component$(() => {
   return (
     <header
       class={`fixed top-0 z-40 flex-none mx-auto w-full transition-all${
-        store.isScrolling || menuOpen.isAktive
+        store.isScrolling 
           ? " md:backdrop-blur-sm md:bg-slate-900/90  bg-slate-900"
           : ""
       }`}

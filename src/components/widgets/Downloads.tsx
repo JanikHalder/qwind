@@ -1,4 +1,6 @@
 import { component$ } from "@builder.io/qwik";
+import Flyer from 'public/Folder-Wiener-Verein-05-2021.pdf'
+import ServiceCard from 'public/Servicekarte.pdf'
 
 export default component$(() => {
     return (
@@ -13,13 +15,13 @@ export default component$(() => {
                 </p>
 
                 <div class="mt-6">
-                    <a href="#" class="inline-flex items-center justify-center w-full px-4 py-2.5 overflow-hidden text-sm text-white transition-colors duration-300 bg-gray-900 rounded-lg shadow sm:w-auto sm:mx-2 hover:bg-gray-700">
+                    <a href={Flyer} download class="inline-flex items-center justify-center w-full px-4 py-2.5 overflow-hidden text-sm text-white transition-colors duration-300 bg-gray-900 rounded-lg shadow sm:w-auto sm:mx-2 hover:bg-gray-700">
                         <span class="mx-2">
                             Flyer Wiener Verein
                         </span>
                     </a>
 
-                    <a href="#"
+                    <a href={ServiceCard} download
                         class="inline-flex items-center justify-center w-full px-4 py-2.5 mt-4 overflow-hidden text-sm text-white transition-colors duration-300 bg-third rounded-lg shadow sm:w-auto sm:mx-2 sm:mt-0 hover:bg-fourth focus:ring">
 
                         <span class="mx-2">
