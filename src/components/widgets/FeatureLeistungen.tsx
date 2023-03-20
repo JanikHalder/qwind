@@ -78,7 +78,7 @@ export default component$(() => {
     return (
         <section class="bg-white">
             <div class="container px-6 py-10 mx-auto max-w-screen-xl">
-                <h2 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl">Unsere Alleinstellungs-<br/><span class="underline decoration-third">Merkmale</span></h2>
+                <h2 class="text-2xl font-semibold text-gray-800 lg:text-3xl">Unsere <span class="underline decoration-third">Alleinstellungs-</span><br/><span class="underline decoration-third">merkmale</span></h2>
 
                 <p class="mt-4 text-gray-500 xl:mt-6 ">
                     Einzigartige Vorteile: Sofortschutz, lebenslanger Schutz und Ausrichtung nach persönlichen Wünschen.
