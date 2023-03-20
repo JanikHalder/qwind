@@ -1,6 +1,5 @@
 import { component$ } from "@builder.io/qwik";
 
-import { IconStar } from '~/components/icons/IconStar';
 import { IconFlame } from "../icons/IconFlame";
 import { IconPuzzle } from "../icons/IconPuzzle";
 import { IconStars } from "../icons/IconStars";
@@ -85,15 +84,15 @@ export default component$(() => {
                     Einzigartige Vorteile: Sofortschutz, lebenslanger Schutz und Ausrichtung nach persönlichen Wünschen.
                 </p>
                 <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-                {items.map((subItem, index) => (
+                {items.map((subItem) => (
                     subItem.map(({title, list, icon: Icon}) => (
-                        <div class="p-8 space-y-3 border-2 border-third rounded-xl">    
+                        <div key={`index-${title}`} class="p-8 space-y-3 border-2 border-third rounded-xl">    
                             {Icon && <Icon />}                            
 
                             <h3 class="text-xl font-semibold text-gray-700 capitalize ">{title}</h3>
                             <ol class="list-disc">
                             {list.map((listitem) => (
-                                <li>
+                                <li key={`index-${listitem}`}>
                                     <p class="text-gray-500">
                                         {listitem}
                                     </p>
