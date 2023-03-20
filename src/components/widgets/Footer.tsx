@@ -11,15 +11,17 @@ export default component$(() => {
     {
       title: "Infomartionen",
       items: [
-        { title: "Leistungen", href: "#" },
-        { title: "Referenzen", href: "#" },
-        { title: "Preise", href: "#" },
+        { title: "Leistungen", href: "/leistungen" },
+        { title: "Preise", href: "/preise" },
+        { title: "Bestattungskosten", href: "/bestattungskosten" },
+        { title: "Referenzen", href: "/referenzen" },
+        { title: "Team", href: "/team" },
       ],
     },
     {
       title: "Firmendetails",
       items: [
-        { title: "Kontakt", href: "#" },
+        { title: "Kontakt", href: "/kontakt" },
         { title: "Impressum", href: "#" },
         { title: "Datenschutz", href: "#" },
       ],
@@ -29,8 +31,8 @@ export default component$(() => {
   const contact = [{
       title: "Kontakt",
       items: [
-        { title: "Tel: +43 50 350 69000", href: "#" },
-        { title: "Mail: info@wvtirol.at", href: "#" },
+        { title: "Tel: +43 50 350 69000", href: "tel:+435035069000" },
+        { title: "Mail: info@wvtirol.at", href: "mailto:info@wvtirol.at" },
         { title: "6020 Innsbruck", href: "#" },
         { title: "Salurnerstraße 3", href: "#" },
       ],

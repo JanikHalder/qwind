@@ -6,9 +6,10 @@ export default component$(() => {
         <section class="relative pt-24 pb-36 bg-fourth overflow-hidden">
         <div class="relative z-10 container px-4 mx-auto">
             <h2 class="text-white mb-5 text-6xl md:text-8xl xl:text-10xl text-center font-bold font-heading tracking-px-n leading-none">Kontakt</h2>
-            <p class="mb-20 text-lg text-center text-gray-500 font-medium leading-normal md:max-w-lg mx-auto">Lorem ipsum dolor sit amet, to the con adipiscing. Volutpat tempor to the condimentum vitae vel purus.</p>
+            <p class="mb-20 text-lg text-center text-gray-500 font-medium leading-normal md:max-w-lg mx-auto">Sicher und einfach: Kontaktieren Sie uns für eine umfassende Bestattungsvorsorge.</p>
             <div class="flex flex-wrap -m-3">
-            <div class="w-full md:w-1/3 p-3">
+            <div class="w-full md:w-1/3 p-3  hover:scale-105 ease-in-out transition duration-700">
+                <a href="mailto:info@wvtirol.at">
                 <div class="p-11 h-full text-center bg-white bg-opacity-90 border border-blueGray-100 rounded-xl shadow-11xl">
                 <div class="mb-6 relative mx-auto w-16 h-16 bg-third rounded-full">
                     <div class="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
@@ -20,8 +21,10 @@ export default component$(() => {
                 <h3 class="mb-3 text-xl font-bold font-heading leading-snug">Sende uns eine Email</h3>
                 <p class="font-medium leading-relaxed">info@wvtirol.at</p>
                 </div>
+                </a>
             </div>
-            <div class="w-full md:w-1/3 p-3">
+            <div class="w-full md:w-1/3 p-3 hover:scale-105 ease-in-out transition duration-700">
+                <a href="tel:+4350 350 69000">
                 <div class="p-11 h-full text-center bg-white bg-opacity-90 border border-blueGray-100 rounded-xl shadow-11xl">
                 <div class="mb-6 relative mx-auto w-16 h-16 bg-third border border-blueGray-200 rounded-full">
                     <div class="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
@@ -33,6 +36,7 @@ export default component$(() => {
                 <h3 class="mb-3 text-xl font-bold font-heading leading-snug">Rufe uns an</h3>
                 <p class="font-medium leading-relaxed">+43 50 350 69000</p>
                 </div>
+                </a>
             </div>
             <div class="w-full md:w-1/3 p-3">
                 <div class="p-11 h-full text-center bg-white bg-opacity-90 border border-blueGray-100 rounded-xl shadow-11xl">

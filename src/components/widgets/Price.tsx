@@ -50,11 +50,11 @@ export default component$(() => {
             <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0 items-start">
                 <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border shadow border-gray-600 xl:p-8 ">
                     <h3 class="mb-4 text-2xl font-semibold">Basis</h3>
-                    <p class="font-light text-gray-500 sm:text-lg mb-8">Das kleine Paket um seinen Bedüfnisse abzudecken</p>
+                    <p class="font-light text-gray-500 sm:text-lg mb-8">Das kleine Paket, um Ihre Bedüfnisse abzudecken</p>
                     <ul role="list" class="mb-8 space-y-4 text-left">
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Sofortschutz – keine Gesundheitsfragen</span>
+                            <span><span class="font-semibold">Sofortschutz</span> – keine Gesundheitsfragen</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -62,34 +62,34 @@ export default component$(() => {
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Lebenslanger Versicherungsschutz</span>
+                            <span><span class="font-semibold">Lebenslanger</span> Versicherungsschutz</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>keine finanzielle Belastung der Hinterbliebenen</span>
+                            <span><span class="font-semibold">keine finanzielle Belastung</span> der Hinterbliebenen</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Gewinnanteile</span>
+                            <span class="font-semibold">Gewinnanteile</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Weltweites Überführungsservice klein</span>
+                            <span>Weltweites <span class="font-semibold">Überführungsservice klein</span></span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Bestattung nach individuellen Wünschen</span>
+                            <span>Bestattung nach  <span class="font-semibold">individuellen Wünschen</span></span>
                         </li>
                     </ul>
-                    <button onClick$={() => {popUpState.value = true; popUpState.text = "Basis"}} class="text-white bg-third hover:bg-fourth focus:ring-4 focus:ring-primary-200 font-bold rounded-lg text-xl px-5 py-2.5 text-center">Paket anfragen</button>
+                    <button onClick$={() => {popUpState.value = true; popUpState.text = "Basis"}} class="text-white bg-third hover:bg-fourth font-bold rounded-lg text-xl px-5 py-2.5 text-center hover:scale-105 ease-in-out transition duration-700">Paket anfragen</button>
                 </div>
                 <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border shadow border-gray-600 xl:p-8">
                     <h3 class="mb-4 text-2xl font-semibold">Tradition</h3>
-                    <p class="font-light text-gray-500 sm:text-lg mb-8">Unser Top - Seller. Das Paket für alle die …</p>
+                    <p class="font-bold text-third sm:text-lg mb-8">Unser Top - Seller.</p>
                     <ul role="list" class="mb-8 space-y-4 text-left">
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Sofortschutz – keine Gesundheitsfragen</span>
+                            <span><span class="font-semibold">Sofortschutz</span> – keine Gesundheitsfragen</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -101,19 +101,19 @@ export default component$(() => {
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span><span class="font-semibold">keine </span>finanzielle Belastung der Hinterbliebenen</span>
+                            <span><span class="font-semibold">keine finanzielle Belastung</span> der Hinterbliebenen</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Gewinnanteile</span>
+                            <span class="font-semibold">Gewinnanteile</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Weltweites Überführungsservice mittel</span>
+                            <span>Weltweites <span class="font-semibold">Überführungsservice mittel</span></span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Bestattung nach individuellen Wünschen</span>
+                            <span>Bestattung nach <span class="font-semibold">individuellen Wünschen</span></span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -128,7 +128,7 @@ export default component$(() => {
                             <span>Abdeckung der Nebenkosten</span>
                         </li>
                     </ul>
-                    <button onClick$={() => {popUpState.value = true; popUpState.text = "Tradition"}}  class="text-white bg-third hover:bg-fourth focus:ring-4 focus:ring-primary-200 font-bold rounded-lg text-xl px-5 py-2.5 text-center">Paket anfragen</button>
+                    <button onClick$={() => {popUpState.value = true; popUpState.text = "Tradition"}}  class="text-white bg-third hover:bg-fourth  font-bold rounded-lg text-xl px-5 py-2.5 text-center hover:scale-105 ease-in-out transition duration-700">Paket anfragen</button>
                 </div>
                 <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow  xl:p-8 ">
                     <h3 class="mb-4 text-2xl font-semibold">Prestige</h3>
@@ -136,7 +136,7 @@ export default component$(() => {
                     <ul role="list" class="mb-8 space-y-4 text-left">
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Sofortschutz – keine Gesundheitsfragen</span>
+                            <span><span class="font-semibold">Sofortschutz</span> – keine Gesundheitsfragen</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -148,11 +148,11 @@ export default component$(() => {
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span><span class="font-semibold">keine </span>finanzielle Belastung der Hinterbliebenen</span>
+                            <span><span class="font-semibold">keine finanzielle Belastung</span> der Hinterbliebenen</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Gewinnanteile</span>
+                            <span class="font-semibold">Gewinnanteile</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -183,7 +183,7 @@ export default component$(() => {
                             <span>Digitale Nachlass</span>
                         </li>
                     </ul>
-                    <button onClick$={() => {popUpState.value = true; popUpState.text = "Prestige"}} class="text-white bg-third hover:bg-fourth focus:ring-4 focus:ring-primary-200 font-bold rounded-lg text-xl px-5 py-2.5 text-center ">Paket anfragen</button>
+                    <button onClick$={() => {popUpState.value = true; popUpState.text = "Prestige"}} class="text-white bg-third hover:bg-fourth font-bold rounded-lg text-xl px-5 py-2.5 text-center hover:scale-105 ease-in-out transition duration-700">Paket anfragen</button>
                 </div>
             </div>
         </div>
@@ -228,7 +228,7 @@ export default component$(() => {
                             <input
                               type="text"
                               id="lname"
-                              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 "
+                              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third   block w-full p-2.5 "
                               placeholder="Nachname"
                               required
                             />
@@ -409,7 +409,7 @@ export default component$(() => {
                 <button
                   onClick$={() => (popUpState.value = false)}
                   type="button"
-                  class="absolute top-0 right-0 bg-fourth text-white w-8 h-8 rounded-full flex items-center justify-center mt-2 mr-2 focus:outline-none"
+                  class="absolute top-0 right-0 bg-fourth text-white w-8 h-8 rounded-full flex items-center justify-center mt-2 mr-2 focus:outline-none hover:scale-105 ease-in-out transition duration-700"
                   aria-label="Close"
                 >
                   <svg

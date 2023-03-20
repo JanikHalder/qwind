@@ -6,7 +6,7 @@ export default component$(() => {
     [
       {
         title: "Die Nummer 1 in der Hinterbliebenenvorsorge.",
-        description: "Der WIENER VEREIN ist der einzige echte Spezialist auf diesem Sektor und beschäftigt sich fast ausschließlich mit der umfassenden Vorsorge für den Todesfall.",
+        description: "Als Spezialist auf dem Gebiet der Bestattungsvorsorge ist der WIENER VEREIN Ihr kompetenter Ansprechpartner. Wir konzentrieren uns ausschließlich auf die umfassende Vorsorge für den Todesfall.",
         icon: "tabler:brand-tailwind",
       },
       {
@@ -26,9 +26,7 @@ export default component$(() => {
       {
         title: "Leistungsstark",
         description:
-          `Sofortschutz, Direktverrechnung mit Bestatter, lebenslanger Schutz, Ausrichtung der Bestattung nach persönlichen Wünschen – ob Feuer-,
-          Erd-, Wiesen-, Baum- oder Seebestattung, und je nach Leistungspaket möglich: Abdeckung der Nebenkosten, weltweites Überführungsservice
-          (Organisation und Bezahlung), Unfalltod-Zusatzversicherung und Digitaler Nachlass-Service.`,
+          `Unser Sofortschutz bietet lebenslangen Schutz und Direktverrechnung mit Bestattern. Wir richten die Bestattung nach Ihren Wünschen aus, ob Feuer-, Erd-, Wiesen-, Baum- oder Seebestattung. Wir können Nebenkosten abdecken und bieten weltweites Überführungsservice sowie eine Unfalltod-Zusatzversicherung und Digitalen Nachlass-Service.`,
         icon: "tabler:rocket",
       },
     ],
@@ -38,19 +36,19 @@ export default component$(() => {
     <section class="scroll-mt-16 bg-fourth" id="features">
       <div class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
         <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
-          <p class="text-base text-white font-bold tracking-wide uppercase">
+          <p class="text-base text-white font-bold tracking-wide uppercase pb-4">
             Gründe
           </p>
           <h2 class="text-4xl md:text-5xl text-third font-bold leading-tighter tracking-tighter mb-4 font-heading">
             Warum Wiener Verein?
           </h2>
           <p class="max-w-3xl mx-auto sm:text-center text-xl text-slate-400">
-            Wir haben … Erfahrung im Bereich … und arbeiten mit unseren Kunden von …………
+            Sorgenfrei in die Zukunft: Die Vorteile einer Bestattungsvorsorge.
           </p>
         </div>
         <div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0 justify-center md:justify-between">
-          {items.map((subitems) => (
-            <div class="space-y-8 sm:px-8 flex flex-col justify-between">
+          {items.map((subitems, index) => (
+            <div key={`item-${index}`} class="space-y-8 sm:px-8 flex flex-col justify-between">
               {subitems.map(({ title, description }) => (
                 <div key={title} class="flex flex-col max-w-md items-center p-6 bg-white rounded-xl text-center h-full">
                   <div class="mb-4 mr-4">

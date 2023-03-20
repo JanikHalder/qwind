@@ -7,7 +7,7 @@ export default component$(() => {
                 <div class="font-light text-gray-500 sm:text-lg">
                     <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">Wer sind wir?</h2>
                     <p class="mb-4">Wiener Verein Bestattungsvorsorge Tirol Vorarlberg</p>
-                    <p>Wir kümmern uns seit 100 Jahren um die Vorsorge für Menschen …………</p>
+                    <p>Wir sind ein Team besteht aus erfahrenen und einfühlsamen Experten auf dem Gebiet der Bestattungsvorsorge. Wir arbeiten eng mit Bestattern und anderen Dienstleistern zusammen, um für Sie eine individuelle und würdevolle Bestattung zu organisieren. Unsere Mitarbeiter sind jederzeit für Sie da und begleiten Sie in jeder Phase der Vorsorge. Wir nehmen uns Zeit für Ihre Fragen und Anliegen und stehen Ihnen mit unserer Erfahrung und Kompetenz zur Seite.</p>
                 </div>
                 <div class="mt-8">
                     <img class="w-full rounded-lg" src="https://www.wvtirol.at/wp-content/uploads/2021/01/P1030075-scaled.jpg" alt="office content 1"/>

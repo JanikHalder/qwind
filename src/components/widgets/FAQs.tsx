@@ -6,30 +6,30 @@ export default component$(() => {
     [
       {
         question: "Welche Vorteile bringt mir der Wiener Verein?",
-        answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.`,
+        answer: `Der Wiener Verein ist ein Spezialist auf dem Gebiet der Bestattungsvorsorge und bietet eine umfassende Absicherung für den Todesfall. Durch die Absicherung der Bestattungskosten und die Ausrichtung der Bestattung nach persönlichen Wünschen können Angehörige entlastet werden. Zusätzlich bietet der Wiener Verein einen umfangreichen Service, wie beispielsweise die Überführung des Verstorbenen oder die Regelung des digitalen Nachlasses.`,
       },
       {
         question: "Kann jeder eine Bestattungsvorsorge abschließen?",
-        answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.`,
+        answer: `Ja, grundsätzlich kann jeder eine Bestattungsvorsorge abschließen. Es gibt keine Altersgrenze oder Gesundheitsprüfung. Eine Bestattungsvorsorge sollte jedoch frühzeitig abgeschlossen werden, um eine ausreichende finanzielle Absicherung zu gewährleisten.`,
       },
       {
-        question: "Kann jeder eine Bestattungsvorsorge abschließen?",
-        answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.`,
+        question: "Was ist Bestattungsvorsorge und warum ist sie wichtig?",
+        answer: `Bestattungsvorsorge ist die Planung und finanzielle Absicherung Ihrer Bestattung im Voraus. Sie ist wichtig, um sicherzustellen, dass Ihre Wünsche respektiert werden und Ihre Angehörigen nicht mit der Organisation und Finanzierung der Bestattung belastet werden.`,
       },
     ],
     [
       {
-        question: "Kann jeder eine Bestattungsvorsorge abschließen?",
-        answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.`,
+        question: "Wie viel kostet eine Bestattung und wie kann ich mich finanziell darauf vorbereiten?",
+        answer: `Die Kosten für eine Bestattung können je nach Art der Bestattung und den zusätzlichen Leistungen stark variieren. Es ist daher wichtig, sich auf die Kosten vorzubereiten und eine finanzielle Absicherung durch eine Bestattungsvorsorge zu haben.`,
       },
       {
-        question: "Kann jeder eine Bestattungsvorsorge abschließen?",
-        answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.`,
+        question: "Was passiert, wenn ich im Ausland versterbe?",
+        answer: `Im Falle eines Todes im Ausland muss eine internationale Überführung organisiert werden. Eine Bestattungsvorsorge kann hier helfen, die Kosten und den Aufwand zu minimieren.`,
       },
       {
         question:
-          "Kann jeder eine Bestattungsvorsorge abschließen?",
-        answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.`,
+          "Was passiert mit meinem digitalen Nachlass?",
+        answer: `Der digitale Nachlass umfasst alle digitalen Konten, die Sie besitzen, wie beispielsweise E-Mail-Konten, Social-Media-Konten oder Cloud-Dienste. Wir regeln ihren auch digitalen Nachlass.`,
       },
     ],
   ];

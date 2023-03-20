@@ -17,11 +17,11 @@ export default component$(() => {
 
   return (
     <header
-      class={`bg-fourth fixed top-0 z-40 flex-none mx-auto w-full transition-all${
+      class={`fixed top-0 z-40 flex-none mx-auto w-full transition-all${
         store.isScrolling 
           ? " md:backdrop-blur-sm md:bg-slate-900/90"
-          : "md:bg-transparent"
-      }`}
+          : " md:bg-transparent"
+      } bg-fourth`}
       id="header"
       window:onScroll$={() => {
         if (!store.isScrolling && window.scrollY >= 10) {
@@ -97,7 +97,7 @@ export default component$(() => {
             <a
               href="/kontakt"
               aria-label="Kontakt Page"
-              class="inline-flex items-center justify-center px-5 py-2 mr-3 text-base font-medium text-center text-white rounded-lg bg-third hover:bg-third-700 focus:ring-4"
+              class="inline-flex items-center justify-center px-5 py-2 mr-3 text-base font-medium text-center text-white rounded-lg bg-third hover:bg-third-700"
             >
               <p class="text-white font-bold">Kontakt</p>
             </a>
