@@ -42,7 +42,7 @@ export default component$(() => {
           <h2 class="text-4xl md:text-5xl text-third font-bold leading-tighter tracking-tighter mb-4 font-heading">
             Warum Wiener Verein?
           </h2>
-          <p class="max-w-3xl mx-auto sm:text-center text-xl text-slate-400">
+          <p class="max-w-3xl mx-auto sm:text-center text-xl text-slate-300">
             Sorgenfrei in die Zukunft: Die Vorteile einer Bestattungsvorsorge.
           </p>
         </div>
