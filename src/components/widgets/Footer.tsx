@@ -55,7 +55,7 @@ export default component$(() => {
               </Link>
             </div>
             <div class="text-sm text-gray-400">
-              Die Bestattungsvorsorge für Tirol und Voralrberg
+              Die Bestattungsvorsorge für Tirol und Vorarlberg
             </div>
           </div>
           {links.map(({ title, items }) => (
