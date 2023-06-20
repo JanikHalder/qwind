@@ -19,7 +19,7 @@ export default component$(() => {
       <Video />
       <Price />
       <FAQs />
-      <Marquee />
+      {/* <Marquee /> */}
       <Contact />
     </>
   );
@@ -29,7 +29,7 @@ export const head: DocumentHead = {
   title: SITE.title,
   meta: [
     {
-      name: "description",
+      name: "Wiener Verein Bestattungsvorsorge | Tirol Vorarlberg",
       content: SITE.description,
     },
   ],

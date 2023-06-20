@@ -18,7 +18,7 @@ export const head: DocumentHead = {
     title: SITE.title,
     meta: [
       {
-        name: "description",
+        name: "Unsere Preise",
         content: SITE.description,
       },
     ],

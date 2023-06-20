@@ -7,6 +7,25 @@ export default component$(() => {
         <div class="relative z-10 container px-4 mx-auto">
             <h2 class="text-white mb-5 text-6xl md:text-8xl xl:text-10xl text-center font-bold font-heading tracking-px-n leading-none">Kontakt</h2>
             <p class="mb-20 text-lg text-center text-gray-300 font-medium leading-normal md:max-w-lg mx-auto">Sicher und einfach: Kontaktieren Sie uns für eine umfassende Bestattungsvorsorge.</p>
+            
+            <div class="py-8 lg:pb-16 px-4 mx-auto max-w-screen-md">
+                <form action="#" class="space-y-8">
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-300 ">Deine E-Mail Adresse</label>
+                        <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " placeholder="name@deinemail.com" required />
+                    </div>
+                    <div>
+                        <label for="subject" class="block mb-2 text-sm font-medium text-gray-300 dark:text-gray-300">Thema</label>
+                        <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm " placeholder="Um was geht es?" required />
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label for="message" class="block mb-2 text-sm font-medium text-gray-300 dark:text-gray-400">Deine Nachricht</label>
+                        <textarea id="message" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 " placeholder="Schreib uns eine Nachricht ..."></textarea>
+                    </div>
+                    <button type="submit" class="py-3 px-5 text-xl font-bold text-center text-white rounded-lg bg-third sm:w-fit hover:bg-fourth focus:ring-4 focus:outline-none focus:ring-third">Nachricht senden</button>
+                </form>
+            </div>
+            
             <div class="flex flex-wrap -m-3">
             <div class="w-full md:w-1/3 p-3  hover:scale-105 ease-in-out transition duration-700">
                 <a href="mailto:info@wvtirol.at">

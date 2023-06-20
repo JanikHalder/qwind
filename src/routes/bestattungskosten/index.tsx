@@ -4,6 +4,9 @@ import CTA from "~/components/widgets/CTA";
 import ContentKosten from "~/components/widgets/ContentKosten";
 import HeroKosten from "~/components/widgets/HeroKosten";
 import Stats from "~/components/widgets/Stats";
+import type { DocumentHead } from "@builder.io/qwik-city";
+
+import { SITE } from "~/config.mjs";
 
 export default component$(() => {
     return (
@@ -16,3 +19,15 @@ export default component$(() => {
         </>
     )
 });
+
+
+export const head: DocumentHead = {
+    title: SITE.title,
+    meta: [
+      {
+        name: "Bestattungskosten im Vergleich",
+        content: SITE.description,
+      },
+    ],
+  };
+  

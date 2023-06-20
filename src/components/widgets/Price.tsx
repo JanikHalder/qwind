@@ -1,10 +1,119 @@
-import React, { component$, useStore } from "@builder.io/qwik";
+import React, { component$, useStore, useSignal, $ } from "@builder.io/qwik";
+import { Form, globalAction$, routeAction$, z, zod$ } from '@builder.io/qwik-city';
+import emailjs from "@emailjs/browser";
+
+export const sendMail = routeAction$(async (data) => {
+  console.log(data);
+})
+
+// export const sendMail = routeAction$(async (data) => {
+//   console.log(data);
+
+//   emailjs.send(
+//       import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+//       import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
+//     {
+//       from_name: data.name,
+//       first_name: data.nameFirst,
+//       to_name: "Janik Halder",
+//       from_email: data.email,
+//       to_email: "info@janikhalder.com",
+//       tel: data.tel,
+//       birthday: data.day + "." + data.month + "." + data.year,
+//       adress: data.adress + " / " + data.plz + " / " + data.stadt,
+//       paket: data.paket,
+//       others: data.others,
+//     },
+//     import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
+//     )
+//     .then((response) => {
+//       console.log("Email sent successfully!", response.status, response.text);
+//       //loading.value = false;
+//       //popUpState.value = false;
+//     },
+//     (error: any) => {
+//       console.log(error);
+  
+//       alert("Etwas ist schiefgelaufen, versuche es bitte nochmal.");
+//     })
+// })
+
 
 export default component$(() => {
+  const nameFirst = useSignal('');
+  const name = useSignal('');
+  const email = useSignal('');
+  const tel = useSignal('');
+  const message = useSignal('');
+  const year = useSignal('');
+  const month = useSignal('');
+  const day = useSignal('');
+  const adress = useSignal('');
+  const plz = useSignal('');
+  const stadt = useSignal('');
+  const paket = useSignal('');
+  let others = useSignal(false);
+  const loading = useSignal(false);
+
+  const action = sendMail();
+
+
   const popUpState = useStore({
     value: false,
     text: "",
   });
+
+  const useSendEmailAction = globalAction$(
+    (data) => {
+      console.log(data);
+    },
+    zod$({
+      name: z.string(),
+    })
+  );
+
+  const handelSubmit = $((event: any) => {
+    event.preventDefault();
+    console.log("GU")
+    // sendEmail(name.value, nameFirst.value, email.value, tel.value);
+  });
+
+
+  const sendEmail = $((name: string, nameFirst: string, email: string, tel: string) => {
+    //loading.value = true;
+    alert("Hey I am here")
+  
+    console.log(nameFirst);
+    
+    // emailjs.send(
+    //   import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+    //   import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
+    // {
+    //   from_name: name,
+    //   first_name: nameFirst,
+    //   to_name: "Janik Halder",
+    //   from_email: email,
+    //   to_email: "info@janikhalder.com",
+    //   tel: tel,
+    //   birthday: day + "." + month + "." + year,
+    //   adress: adress + " / " + plz + " / " + stadt,
+    //   paket: paket,
+    //   others: others,
+    // },
+    // import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
+    // )
+    // .then((response) => {
+    //   console.log("Email sent successfully!", response.status, response.text);
+    //   //loading.value = false;
+    //   //popUpState.value = false;
+    // },
+    // (error: any) => {
+    //   console.log(error);
+  
+    //   alert("Etwas ist schiefgelaufen, versuche es bitte nochmal.");
+    // })
+  });
+  
   const dateState = useStore({
     datenow: new Date(),
   });
@@ -211,7 +320,7 @@ export default component$(() => {
                         <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">
                           Anfragen
                         </h2>
-                        <form action="#" class="space-y-4">
+                        <Form action={action} class="space-y-4">
                           <div>
                             <label class="block mb-2 text-sm font-medium text-gray-900 ">
                               Kontaktdaten
@@ -221,6 +330,7 @@ export default component$(() => {
                             <input
                               type="text"
                               id="fname"
+                              bind:value={nameFirst}
                               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 "
                               placeholder="Vorname"
                               required
@@ -228,6 +338,7 @@ export default component$(() => {
                             <input
                               type="text"
                               id="lname"
+                              bind:value={name}
                               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third   block w-full p-2.5 "
                               placeholder="Nachname"
                               required
@@ -238,12 +349,14 @@ export default component$(() => {
                             <input
                               type="email"
                               id="email"
+                              bind:value={email}
                               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 "
                               placeholder="Deine E-Mail"
                             />
                             <input
                               type="tel"
                               id="tel"
+                              bind:value={tel}
                               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 "
                               placeholder="Deine Telefonnummer"
                               required
@@ -260,6 +373,7 @@ export default component$(() => {
                                 <select
                                   name="day"
                                   id="day"
+                                  bind:value={day}
                                   class="block appearance-none w-full py-2 px-3 pr-8 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                 >
                                   <option value="">Tag</option>
@@ -290,6 +404,7 @@ export default component$(() => {
                                 <select
                                   name="month"
                                   id="month"
+                                  bind:value={month}
                                   class="block appearance-none w-full py-2 px-3 pr-8 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                 >
                                   <option value="">Monat</option>
@@ -322,6 +437,7 @@ export default component$(() => {
                                 <select
                                   name="year"
                                   id="year"
+                                  bind:value={year}
                                   class="block appearance-none w-full py-2 px-3 pr-8 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                 >
                                   <option value="">Jahr</option>
@@ -356,6 +472,7 @@ export default component$(() => {
                               <input
                               type="text"
                               id="adresse"
+                              bind:value={adress}
                               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 "
                               placeholder="Adresse"
                               />
@@ -365,6 +482,7 @@ export default component$(() => {
                               <input
                               type="text"
                               id="plz"
+                              bind:value={plz}
                               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 "
                               placeholder="Postleitzahl"
                               />
@@ -373,6 +491,7 @@ export default component$(() => {
                               <input
                               type="text"
                               id="stadt"
+                              bind:value={stadt}
                               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 "
                               placeholder="Stadt / Ort"
                               />
@@ -391,23 +510,41 @@ export default component$(() => {
                               <label class="block mb-2 text-sm font-medium text-gray-900 w-full">
                                 Auch andere Pakete anfragen?
                               </label>
-                              <input id="yellow-checkbox" type="checkbox" value="" class="w-4 h-4 p-4 accent-third text-yellow-400 bg-gray-100 border-gray-300 rounded focus:ring-yellow-500 focus:ring-2"/>
+                              <input onClick$={() => others.value = !others} id="yellow-checkbox" type="checkbox" class="w-4 h-4 p-4 accent-third text-yellow-400 bg-gray-100 border-gray-300 rounded focus:ring-yellow-500 focus:ring-2"/>
                           </div>
                           <div class="w-full flex justify-center items-center">
                             <button
                               type="submit"
+                              // onClick$={async () => {
+                              // const { value } = await action.submit({
+                              //   name: name,
+                              //   nameFirst: nameFirst,
+                              //   email: email,
+                              //   tel: tel,
+                              //   year: year,
+                              //   month: month,
+                              //   day: day,
+                              //   adress: adress,
+                              //   plz: plz,
+                              //   stadt: stadt,
+                              //   paket: paket,
+                              //   others: others,
+                              // });
+                              //   action;
+                              //   popUpState.value = false;
+                              // }}
                               class="text-white bg-third hover:bg-fourth focus:ring-4 focus:ring-primary-200 font-bold rounded-lg text-xl px-5 py-2.5 text-center "
                             >
-                              Anfragen
+                              {loading.value ? "Wird gesendet..." : "Anfragen"}
                             </button>
                           </div>
-                        </form>
+                        </Form>
                       </div>
                     </div>
                   </div>
                 </div>
                 <button
-                  onClick$={() => (popUpState.value = false)}
+                  onClick$={() => popUpState.value = false}
                   type="button"
                   class="absolute top-0 right-0 bg-fourth text-white w-8 h-8 rounded-full flex items-center justify-center mt-2 mr-2 focus:outline-none hover:scale-105 ease-in-out transition duration-700"
                   aria-label="Close"
