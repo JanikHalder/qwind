@@ -19,11 +19,11 @@ export default component$(() => {
       ],
     },
     {
-      title: "Firmendetails",
+      title: "Zusätzliche Links",
       items: [
         { title: "Kontakt", href: "/kontakt" },
-        { title: "Impressum", href: "#" },
-        { title: "Datenschutz", href: "#" },
+        { title: "Impressum", href: "/impressum" },
+        { title: "Datenschutz", href: "/datenschutz" },
       ],
     },
   ];
@@ -102,7 +102,7 @@ export default component$(() => {
           ))}
         </div>
         <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
-          <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
+          {/* <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
             {social.map(({ label, href, icon: Icon }) => (
               <li key={label}>
                 <Link
@@ -115,7 +115,7 @@ export default component$(() => {
                 </Link>
               </li>
             ))}
-          </ul>
+          </ul> */}
 
           <div class="text-sm  mr-4 text-slate-400">
             Made by{" "}

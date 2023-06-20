@@ -325,7 +325,7 @@ function PriceForm({ text }: any) {
                           </div>
                           <div className="w-full flex justify-center items-center">
                             <button
-                              type="submit"
+                              
                               className="text-white bg-third hover:bg-fourth focus:ring-4 focus:ring-primary-200 font-bold rounded-lg text-xl px-5 py-2.5 text-center "
                             >
                               {loading ? "Wird gesendet..." : "Anfragen"}

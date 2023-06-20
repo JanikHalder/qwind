@@ -1,42 +1,5 @@
 import React, { component$, useStore, useSignal, $ } from "@builder.io/qwik";
-import { Form, globalAction$, routeAction$, z, zod$ } from '@builder.io/qwik-city';
 import emailjs from "@emailjs/browser";
-
-export const sendMail = routeAction$(async (data) => {
-  console.log(data);
-})
-
-// export const sendMail = routeAction$(async (data) => {
-//   console.log(data);
-
-//   emailjs.send(
-//       import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
-//       import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
-//     {
-//       from_name: data.name,
-//       first_name: data.nameFirst,
-//       to_name: "Janik Halder",
-//       from_email: data.email,
-//       to_email: "info@janikhalder.com",
-//       tel: data.tel,
-//       birthday: data.day + "." + data.month + "." + data.year,
-//       adress: data.adress + " / " + data.plz + " / " + data.stadt,
-//       paket: data.paket,
-//       others: data.others,
-//     },
-//     import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
-//     )
-//     .then((response) => {
-//       console.log("Email sent successfully!", response.status, response.text);
-//       //loading.value = false;
-//       //popUpState.value = false;
-//     },
-//     (error: any) => {
-//       console.log(error);
-  
-//       alert("Etwas ist schiefgelaufen, versuche es bitte nochmal.");
-//     })
-// })
 
 
 export default component$(() => {
@@ -55,63 +18,56 @@ export default component$(() => {
   let others = useSignal(false);
   const loading = useSignal(false);
 
-  const action = sendMail();
-
 
   const popUpState = useStore({
     value: false,
     text: "",
   });
 
-  const useSendEmailAction = globalAction$(
-    (data) => {
-      console.log(data);
-    },
-    zod$({
-      name: z.string(),
-    })
-  );
 
-  const handelSubmit = $((event: any) => {
-    event.preventDefault();
-    console.log("GU")
-    // sendEmail(name.value, nameFirst.value, email.value, tel.value);
-  });
-
-
-  const sendEmail = $((name: string, nameFirst: string, email: string, tel: string) => {
-    //loading.value = true;
-    alert("Hey I am here")
-  
-    console.log(nameFirst);
+  const sendEmail = $(() => {
+    loading.value = true;
     
-    // emailjs.send(
-    //   import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
-    //   import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
-    // {
-    //   from_name: name,
-    //   first_name: nameFirst,
-    //   to_name: "Janik Halder",
-    //   from_email: email,
-    //   to_email: "info@janikhalder.com",
-    //   tel: tel,
-    //   birthday: day + "." + month + "." + year,
-    //   adress: adress + " / " + plz + " / " + stadt,
-    //   paket: paket,
-    //   others: others,
-    // },
-    // import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
-    // )
-    // .then((response) => {
-    //   console.log("Email sent successfully!", response.status, response.text);
-    //   //loading.value = false;
-    //   //popUpState.value = false;
-    // },
-    // (error: any) => {
-    //   console.log(error);
+    emailjs.send(
+      import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+      import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
+    {
+      from_name: nameFirst.value + " " + name.value,
+      to_name: "Janik Halder",
+      from_email: email.value,
+      to_email: "info@janikhalder.com",
+      tel: tel.value,
+      birthday: day.value + "." + month.value + "." + year.value,
+      adress: adress.value + " / " + plz.value + " / " + stadt.value,
+      paket: paket.value,
+      others: others.value ? "Ja" : "Nein",
+      message: '',
+      subject: '',
+    },
+    import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
+    )
+    .then((response) => {
+      alert("Danke für deine Anfrage. Wir melden uns schnellstmöglich.");
+      nameFirst.value = '';
+      name.value = '';
+      email.value = '';
+      tel.value = '';
+      message.value = '';
+      year.value = '';
+      month.value = '';
+      adress.value = '';
+      day.value = '';
+      plz.value = '';
+      stadt.value = '';
+      paket.value = '';
+      others.value = false;
+      loading.value = false;
+    },
+    (error: any) => {
+      console.log(error);
   
-    //   alert("Etwas ist schiefgelaufen, versuche es bitte nochmal.");
-    // })
+      alert("Etwas ist schiefgelaufen, versuche es bitte nochmal.");
+    })
   });
   
   const dateState = useStore({
@@ -154,7 +110,7 @@ export default component$(() => {
     <section class="bg-fourth">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-                <h2 class="mb-4 text-6xl tracking-tight font-extrabold text-white">Unsere Pakete</h2>
+                <h2 class="mb-4 text-4xl sm:text-6xl tracking-tight font-extrabold text-white">Unsere Pakete</h2>
             </div>
             <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0 items-start">
                 <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border shadow border-gray-600 xl:p-8 ">
@@ -320,7 +276,7 @@ export default component$(() => {
                         <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">
                           Anfragen
                         </h2>
-                        <Form action={action} class="space-y-4">
+                        <form preventdefault:submit class="space-y-4">
                           <div>
                             <label class="block mb-2 text-sm font-medium text-gray-900 ">
                               Kontaktdaten
@@ -330,6 +286,7 @@ export default component$(() => {
                             <input
                               type="text"
                               id="fname"
+                              name="fname"
                               bind:value={nameFirst}
                               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 "
                               placeholder="Vorname"
@@ -338,6 +295,7 @@ export default component$(() => {
                             <input
                               type="text"
                               id="lname"
+                              name="lname"
                               bind:value={name}
                               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third   block w-full p-2.5 "
                               placeholder="Nachname"
@@ -349,6 +307,7 @@ export default component$(() => {
                             <input
                               type="email"
                               id="email"
+                              name="email"
                               bind:value={email}
                               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 "
                               placeholder="Deine E-Mail"
@@ -356,6 +315,7 @@ export default component$(() => {
                             <input
                               type="tel"
                               id="tel"
+                              name="tel"
                               bind:value={tel}
                               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 "
                               placeholder="Deine Telefonnummer"
@@ -471,7 +431,8 @@ export default component$(() => {
                           <div>
                               <input
                               type="text"
-                              id="adresse"
+                              id="adress"
+                              name="adress"
                               bind:value={adress}
                               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 "
                               placeholder="Adresse"
@@ -482,6 +443,7 @@ export default component$(() => {
                               <input
                               type="text"
                               id="plz"
+                              name="plz"
                               bind:value={plz}
                               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 "
                               placeholder="Postleitzahl"
@@ -491,6 +453,7 @@ export default component$(() => {
                               <input
                               type="text"
                               id="stadt"
+                              name="stadt"
                               bind:value={stadt}
                               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 "
                               placeholder="Stadt / Ort"
@@ -502,43 +465,26 @@ export default component$(() => {
                             <label class="block mb-2 text-sm font-medium text-gray-900 w-full">
                               Paket
                             </label>
-                            <p class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm">
-                              {popUpState.text}
-                            </p>
+                            <input name="paket" value={popUpState.text} class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm" disabled/>
                           </div>
                           <div class="flex flex-row justify-center items-center">
                               <label class="block mb-2 text-sm font-medium text-gray-900 w-full">
                                 Auch andere Pakete anfragen?
                               </label>
-                              <input onClick$={() => others.value = !others} id="yellow-checkbox" type="checkbox" class="w-4 h-4 p-4 accent-third text-yellow-400 bg-gray-100 border-gray-300 rounded focus:ring-yellow-500 focus:ring-2"/>
+                              <input name="others" onClick$={() => others.value = !others} id="yellow-checkbox" type="checkbox" class="w-4 h-4 p-4 accent-third text-yellow-400 bg-gray-100 border-gray-300 rounded focus:ring-yellow-500 focus:ring-2"/>
                           </div>
                           <div class="w-full flex justify-center items-center">
                             <button
-                              type="submit"
-                              // onClick$={async () => {
-                              // const { value } = await action.submit({
-                              //   name: name,
-                              //   nameFirst: nameFirst,
-                              //   email: email,
-                              //   tel: tel,
-                              //   year: year,
-                              //   month: month,
-                              //   day: day,
-                              //   adress: adress,
-                              //   plz: plz,
-                              //   stadt: stadt,
-                              //   paket: paket,
-                              //   others: others,
-                              // });
-                              //   action;
-                              //   popUpState.value = false;
-                              // }}
+                              onClick$={() => {
+                                sendEmail();
+                              }} 
+                              preventdefault:submit
                               class="text-white bg-third hover:bg-fourth focus:ring-4 focus:ring-primary-200 font-bold rounded-lg text-xl px-5 py-2.5 text-center "
                             >
                               {loading.value ? "Wird gesendet..." : "Anfragen"}
                             </button>
                           </div>
-                        </Form>
+                        </form>
                       </div>
                     </div>
                   </div>

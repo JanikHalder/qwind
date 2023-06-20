@@ -102,7 +102,7 @@ export default component$(() => {
     return (
         <section class="relative pt-24 pb-32 bg-white overflow-hidden">
             <div class="relative z-10 container px-4 mx-auto">
-                <h2 class="mb-16 text-6xl md:text-7xl font-bold font-heading text-center tracking-px-n leading-tight">Einen Auszug unserer Kunden</h2>
+                <h2 class="mb-16 text-4xl sm:text-6xl md:text-7xl font-bold font-heading text-center tracking-px-n leading-tight">Einen Auszug unserer Kunden</h2>
                 <div class="flex flex-wrap -m-3">
                 {content.map((people) => 
                     <div class="w-full md:w-1/2 lg:w-1/3 p-3 rounded-sm" key={people.name}>

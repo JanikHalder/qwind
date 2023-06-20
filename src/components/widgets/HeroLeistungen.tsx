@@ -5,7 +5,7 @@ export default component$(() => {
         <section class="bg-fourth">
             <div class="pt-24 grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:pt-32 lg:grid-cols-12">
                 <div class="mr-auto place-self-center lg:col-span-7">
-                    <p class="text-base text-third font-semibold tracking-wide uppercase">
+                    <p class="text-base text-third font-semibold tracking-wide uppercase mb-4">
                         Wiener Verein
                     </p>
                     <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl text-white">Unsere Leistungen</h1>

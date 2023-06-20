@@ -79,7 +79,7 @@ export default component$(() => {
                   </li>
                 ))}
                 <li class="px-4">
-                  <div class="items-center md:hidden flex">
+                  <div class="items-center md:hidden flex my-4">
                     <a
                       href="/kontakt"
                       aria-label="Kontakt Page"
