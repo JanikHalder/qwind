@@ -8,7 +8,7 @@ export default component$(() => {
     <section
       class={`bg-gradient-to-b flex items-center justify-start h-[90vh] relative overflow-hidden bg-fourth`}
     >
-      <div class="z-20 max-w-6xl mx-auto px-4 sm:px-6 flex h-full 2xl:h-auto pt-[72px] w-full items-center justify-center md:justify-start z-10">
+      <div class="z-20 max-w-6xl mx-auto px-4 sm:px-6 flex h-full 2xl:h-auto pt-[72px] w-full items-center justify-center md:justify-start">
         <div class="py-12 md:py-12 lg:py-16 block md:flex text-center md:text-left">
           <div class="pb-12 md:pb-0 md:py-0 mx-auto md:pr-16 flex items-center basis-3/5">
             <div>
@@ -50,7 +50,7 @@ export default component$(() => {
           loading="eager"
         />  
       </div>
-      <div class="absolute z-20 bottom-0 right-0 w-[102vw]">
+      <div class="absolute z-20 bottom-0  w-[102vw] content-center">
          <SpacerHeader />
       </div>
     </section>
