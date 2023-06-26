@@ -19,7 +19,8 @@ export default component$(() => {
     ],
     [
       {
-        question: "Wie viel kostet eine Bestattung und wie kann ich mich finanziell darauf vorbereiten?",
+        question:
+          "Wie viel kostet eine Bestattung und wie kann ich mich finanziell darauf vorbereiten?",
         answer: `Die Kosten für eine Bestattung können je nach Art der Bestattung und den zusätzlichen Leistungen stark variieren. Es ist daher wichtig, sich auf die Kosten vorzubereiten und eine finanzielle Absicherung durch eine Bestattungsvorsorge zu haben.`,
       },
       {
@@ -27,8 +28,7 @@ export default component$(() => {
         answer: `Im Falle eines Todes im Ausland muss eine internationale Überführung organisiert werden. Eine Bestattungsvorsorge kann hier helfen, die Kosten und den Aufwand zu minimieren.`,
       },
       {
-        question:
-          "Was passiert mit meinem digitalen Nachlass?",
+        question: "Was passiert mit meinem digitalen Nachlass?",
         answer: `Der digitale Nachlass umfasst alle digitalen Konten, die Sie besitzen, wie beispielsweise E-Mail-Konten, Social-Media-Konten oder Cloud-Dienste. Wir regeln ihren auch digitalen Nachlass.`,
       },
     ],
@@ -58,9 +58,7 @@ export default component$(() => {
                       {question}
                     </h3>
                     {answer.split("\n\n").map((paragraph) => (
-                      <p class="text-gray-700 mb-2">
-                        {paragraph}
-                      </p>
+                      <p class="text-gray-700 mb-2">{paragraph}</p>
                     ))}
                   </div>
                 ))}

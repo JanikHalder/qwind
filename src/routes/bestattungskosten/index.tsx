@@ -9,25 +9,23 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { SITE } from "~/config.mjs";
 
 export default component$(() => {
-    return (
-        <>
-            <HeroKosten />
-            <ContentKosten />
-            <BenefitsBestattungskosten />
-            <Stats />
-            <CTA />
-        </>
-    )
+  return (
+    <>
+      <HeroKosten />
+      <ContentKosten />
+      <BenefitsBestattungskosten />
+      <Stats />
+      <CTA />
+    </>
+  );
 });
 
-
 export const head: DocumentHead = {
-    title: SITE.title,
-    meta: [
-      {
-        name: "Bestattungskosten im Vergleich",
-        content: SITE.description,
-      },
-    ],
-  };
-  
+  title: SITE.title,
+  meta: [
+    {
+      name: "Bestattungskosten im Vergleich",
+      content: SITE.description,
+    },
+  ],
+};

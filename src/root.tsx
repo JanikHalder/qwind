@@ -5,9 +5,10 @@ import {
   ServiceWorkerRegister,
 } from "@builder.io/qwik-city";
 
-import { RouterHead } from "~/components/core/RouterHead";
-import { DarkThemeLauncher } from "~/components/core/DarkThemeLauncher";
+import { RouterHead } from "~/components/common/RouterHead";
+import { DarkThemeLauncher } from "~/components/common/DarkThemeLauncher";
 
+import "@fontsource-variable/inter";
 import globalStyles from "~/assets/styles/global.css?inline";
 
 export default component$(() => {
@@ -26,10 +27,10 @@ export default component$(() => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
-        <link
+        {/* <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
           rel="stylesheet"
-        />
+        /> */}
         <RouterHead />
         <DarkThemeLauncher />
       </head>

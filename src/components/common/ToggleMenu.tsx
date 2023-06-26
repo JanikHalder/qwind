@@ -7,7 +7,6 @@ interface ItemProps {
   show$: PropFunction<() => boolean>;
 }
 
-
 export default component$((props: ItemProps) => {
   const iconClass = props.iconClass;
 

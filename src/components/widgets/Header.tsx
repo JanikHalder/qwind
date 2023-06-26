@@ -2,7 +2,7 @@ import { component$, useStore, $ } from "@builder.io/qwik";
 import { useContent } from "@builder.io/qwik-city";
 
 import Logo from "~/components/atoms/Logo";
-import ToggleMenu from "~/components/core/ToggleMenu";
+import ToggleMenu from "~/components/common/ToggleMenu";
 
 export default component$(() => {
   const store = useStore({
@@ -10,15 +10,17 @@ export default component$(() => {
   });
   const menuOpen = useStore({
     isAktive: false,
-  })
-  const changeAktive$ = $(() => menuOpen.isAktive = (menuOpen.isAktive ? false : true));
+  });
+  const changeAktive$ = $(
+    () => (menuOpen.isAktive = menuOpen.isAktive ? false : true)
+  );
 
   const { menu } = useContent();
 
   return (
     <header
       class={`fixed top-0 z-40 flex-none mx-auto w-full transition-all${
-        store.isScrolling 
+        store.isScrolling
           ? " md:backdrop-blur-sm md:bg-slate-900/90"
           : " md:bg-transparent"
       } bg-fourth`}

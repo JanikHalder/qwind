@@ -1,7 +1,6 @@
-import { component$, useStore, useClientEffect$ } from "@builder.io/qwik";
-
-import { IconSun } from "~/components/icons/IconSun";
-import { IconMoon } from "../icons/IconMoon";
+import { component$, useStore, useVisibleTask$ } from "@builder.io/qwik";
+import { IconSun } from "~/components/icons/IconSun"
+import { IconMoon } from "~/components/icons/IconMoon"
 
 interface ItemProps {
   iconClass?: string;
@@ -15,13 +14,11 @@ export default component$((props: ItemProps) => {
       undefined,
   });
 
-  useClientEffect$(() => {
+  useVisibleTask$(() => {
     store.theme =
-      window.localStorage.theme === "dark" ||
-      (!("theme" in window.localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-        ? "dark"
-        : "light";
+      document.documentElement.classList.contains("dark")
+      ? "dark"
+      : "light";
   });
 
   return (
