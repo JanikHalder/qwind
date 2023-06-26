@@ -1,12 +1,12 @@
 // This pragma is required so that React JSX is used instead of Qwik JSX
 /** @jsxImportSource react */
 import { qwikify$ } from "@builder.io/qwik-react";
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-function PriceForm({ text }: any) {
+function PriceForm({ text }) {
   //const formRef = useRef();
-  const formRef = useRef<HTMLFormElement>(null!);
+  const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
     nameFirst: "",
@@ -62,7 +62,7 @@ function PriceForm({ text }: any) {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: any) => {
+  const handleChange = (e) => {
     const { target } = e;
     const { name, value } = target;
 
@@ -72,7 +72,7 @@ function PriceForm({ text }: any) {
     });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
@@ -112,7 +112,7 @@ function PriceForm({ text }: any) {
             others: false,
           });
         },
-        (error: any) => {
+        (error) => {
           setLoading(false);
           console.error(error);
 
