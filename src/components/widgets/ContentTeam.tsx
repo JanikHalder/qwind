@@ -1,5 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 
+import TeamImage from '../../assets/wienervereinteam.jpg';
+
 export default component$(() => {
   return (
     <section class="bg-white">
@@ -22,7 +24,7 @@ export default component$(() => {
         <div class="mt-8">
           <img
             class="w-full rounded-lg"
-            src="https://www.wvtirol.at/wp-content/uploads/2021/01/P1030075-scaled.jpg"
+            src={TeamImage}
             alt="office content 1"
           />
         </div>
