@@ -19,5 +19,14 @@ export const head: DocumentHead = {
       name: "description",
       content: SITE.description,
     },
+    // Open graph
+    {
+      property: 'og:title',
+      content: SITE.title,
+    },
+    {
+      property: 'og:description',
+      content: SITE.description,
+    },
   ],
 };

@@ -27,5 +27,14 @@ export const head: DocumentHead = {
       name: "Bestattungskosten im Vergleich",
       content: SITE.description,
     },
+    // Open graph
+    {
+      property: 'og:title',
+      content: SITE.title,
+    },
+    {
+      property: 'og:description',
+      content: SITE.description,
+    },
   ],
 };
